@@ -36,7 +36,7 @@ function Index() {
       <ScrollAtmosphere />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/75 backdrop-blur-xl">
         <div className="mx-auto grid h-16 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-5 sm:px-8 lg:flex lg:px-12">
-          <a href="#top" className="flex min-w-0 items-center"><img src={logo.url} alt="JAKE logo" className="logo-glow h-10 w-auto shrink-0 object-contain" /></a>
+          <a href="#top" className="flex min-w-0 items-center"><img src={logo} alt="JAKE logo" className="logo-glow h-10 w-auto shrink-0 object-contain" /></a>
           <nav aria-label="Main navigation" className="ml-auto hidden items-center gap-7 lg:flex">{nav.map(([label, href]) => <NavLink key={href} href={href}>{label}</NavLink>)}</nav>
           <Button asChild size="sm" className="ml-2 hidden font-mono text-[10px] uppercase tracking-[0.16em] sm:inline-flex lg:ml-6"><a href="#join">Join JAKE <ArrowDownRight /></a></Button>
           <Button type="button" variant="ghost" size="icon" aria-label="Open navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen((value) => !value)} className="lg:hidden"><Menu /></Button>
@@ -60,7 +60,7 @@ function Index() {
             <Reveal className="relative flex min-h-[330px] items-end justify-center sm:min-h-[420px] lg:min-h-[640px]">
               <div className="robot-halo" />
               <RobotParticles />
-              <Parallax strength={0.06} className="relative flex h-full items-end justify-center"><img src={robot.url} alt="JAKE service robot" className="relative max-h-[410px] w-auto max-w-full object-contain robot-shadow sm:max-h-[520px] lg:max-h-[650px]" /></Parallax>
+              <Parallax strength={0.06} className="relative flex h-full items-end justify-center"><img src={robot} alt="JAKE service robot" className="relative max-h-[410px] w-auto max-w-full object-contain robot-shadow sm:max-h-[520px] lg:max-h-[650px]" /></Parallax>
             </Reveal>
           </div>
           <div className="mx-auto mt-6 flex max-w-7xl flex-wrap gap-2 border-t border-border pt-5 sm:mt-10 sm:pt-7">{heroTags.map((tag) => <span key={tag} className="rounded-sm border border-border bg-card/45 px-3 py-2 font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground backdrop-blur-sm sm:text-[10px]">{tag}</span>)}</div>
@@ -74,7 +74,7 @@ function Index() {
               <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">JAKE explores how a service robot can welcome, guide, inform, and support people through simple everyday interactions.</p>
               <a href="#capabilities" className="story-link mt-8 inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.16em] text-primary">See what JAKE can do <ArrowRight className="h-4 w-4" /></a>
             </Reveal>
-            <Reveal className="relative min-w-0 overflow-hidden rounded-md border border-border bg-card shadow-xl"><Parallax strength={0.025}><img src={faculty.url} alt="JAKE at the Faculty of Engineering" className="aspect-[4/3] w-full scale-[1.08] object-cover object-[54%_center] sm:aspect-[16/10]" /></Parallax><div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/80 to-transparent p-5 pt-20"><Label className="text-foreground">Faculty of Engineering · USJ</Label></div></Reveal>
+            <Reveal className="relative min-w-0 overflow-hidden rounded-md border border-border bg-card shadow-xl"><Parallax strength={0.025}><img src={faculty} alt="JAKE at the Faculty of Engineering" className="aspect-[4/3] w-full scale-[1.08] object-cover object-[54%_center] sm:aspect-[16/10]" /></Parallax><div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/80 to-transparent p-5 pt-20"><Label className="text-foreground">Faculty of Engineering · USJ</Label></div></Reveal>
           </div>
         </section>
 
@@ -89,7 +89,7 @@ function Index() {
 
         <section id="vision" className="relative overflow-hidden border-t border-border px-5 py-20 sm:px-8 sm:py-28 lg:px-12 lg:py-36">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.05fr] lg:items-center">
-            <Reveal className="relative flex min-h-[410px] items-end justify-center sm:min-h-[560px]"><span aria-hidden="true" className="absolute left-0 top-0 font-display text-[5.2rem] font-bold uppercase leading-none text-foreground/[0.035] sm:text-[9rem]">People</span><Parallax strength={0.055}><img src={robots.url} alt="JAKE front and rear views" className="relative max-h-[560px] w-full object-contain robot-shadow" /></Parallax></Reveal>
+            <Reveal className="relative flex min-h-[410px] items-end justify-center sm:min-h-[560px]"><span aria-hidden="true" className="absolute left-0 top-0 font-display text-[5.2rem] font-bold uppercase leading-none text-foreground/[0.035] sm:text-[9rem]">People</span><Parallax strength={0.055}><img src={robots} alt="JAKE front and rear views" className="relative max-h-[560px] w-full object-contain robot-shadow" /></Parallax></Reveal>
             <div>
               <Reveal><Label><span className="text-primary">03</span> · Designed around people</Label><h2 className="mt-5 font-display text-3xl font-semibold uppercase leading-[1.08] sm:text-5xl">A simple experience from arrival to assistance.</h2><p className="mt-5 max-w-lg text-muted-foreground sm:text-lg">JAKE is envisioned as an approachable point of support—easy to understand, useful in the moment, and ready to let people continue with confidence.</p></Reveal>
               <ol className="mt-10 border-y border-border">{experience.map((step, index) => <Reveal key={step} className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 border-b border-border py-5 last:border-0"><span className="font-mono text-[10px] text-primary">0{index + 1}</span><h3 className="min-w-0 font-display text-lg uppercase sm:text-xl">{step}</h3><ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground" /></Reveal>)}</ol>
@@ -98,7 +98,7 @@ function Index() {
         </section>
 
         <section className="relative overflow-hidden border-t border-border">
-          <Parallax strength={0.018}><img src={faculty.url} alt="JAKE in the Faculty of Engineering environment" className="h-[72svh] min-h-[520px] w-full scale-[1.08] object-cover object-[53%_center]" /></Parallax>
+          <Parallax strength={0.018}><img src={faculty} alt="JAKE in the Faculty of Engineering environment" className="h-[72svh] min-h-[520px] w-full scale-[1.08] object-cover object-[53%_center]" /></Parallax>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/35 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 px-5 pb-12 sm:px-8 sm:pb-16 lg:px-12 lg:pb-20"><Reveal className="mx-auto max-w-7xl"><Label><span className="text-primary">04</span> · Starting at the faculty</Label><h2 className="mt-5 max-w-4xl font-display text-3xl font-semibold uppercase leading-[1.08] sm:text-5xl">A real environment for a meaningful first step.</h2><p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">The Faculty of Engineering at the University of Sri Jayewardenepura gives JAKE a grounded place to explore assistance in everyday life.</p></Reveal></div>
         </section>
@@ -118,12 +118,12 @@ function Index() {
           <div className="join-glow" />
           <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_0.58fr]">
             <Reveal><Label><span className="text-primary">06</span> · Join Project JAKE</Label><h2 className="mt-5 max-w-4xl font-display text-4xl font-semibold uppercase leading-[1.02] sm:text-6xl lg:text-7xl">Build what<br /><span className="text-primary">moves next.</span></h2><p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">Be part of an emerging service-robot initiative shaped by people, purpose, and a real-world vision.</p><Button asChild size="lg" className="glow mt-9 h-12 font-mono text-[11px] uppercase tracking-[0.16em]"><a href="#top">Join Project JAKE <ArrowRight /></a></Button></Reveal>
-            <Reveal className="hidden justify-center lg:flex"><Parallax strength={0.045}><img src={robot.url} alt="JAKE service robot" className="max-h-[520px] w-auto robot-shadow" /></Parallax></Reveal>
+            <Reveal className="hidden justify-center lg:flex"><Parallax strength={0.045}><img src={robot} alt="JAKE service robot" className="max-h-[520px] w-auto robot-shadow" /></Parallax></Reveal>
           </div>
         </section>
       </main>
 
-      <footer className="relative z-10 border-t border-border bg-background px-5 py-10 sm:px-8 lg:px-12"><div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-5"><img src={logo.url} alt="JAKE — Japura Autonomous Kiosk Engine" className="logo-glow h-14 w-auto min-w-0 object-contain" /><div className="min-w-0 text-right"><p className="font-display text-[10px] uppercase sm:text-xs">Faculty of Engineering</p><p className="mt-1 text-xs text-muted-foreground">University of Sri Jayewardenepura</p></div></div></footer>
+      <footer className="relative z-10 border-t border-border bg-background px-5 py-10 sm:px-8 lg:px-12"><div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-5"><img src={logo} alt="JAKE — Japura Autonomous Kiosk Engine" className="logo-glow h-14 w-auto min-w-0 object-contain" /><div className="min-w-0 text-right"><p className="font-display text-[10px] uppercase sm:text-xs">Faculty of Engineering</p><p className="mt-1 text-xs text-muted-foreground">University of Sri Jayewardenepura</p></div></div></footer>
     </div>
   );
 }
