@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownRight, ArrowRight, Menu } from "lucide-react";
 import { useState } from "react";
-import faculty from "@/assets/faculty-image-with-jake.png.asset.json";
-import logo from "@/assets/jake-logo.png.asset.json";
-import robot from "@/assets/jake-robot.png.asset.json";
-import robots from "@/assets/jake-robots.png.asset.json";
+import faculty from "@/assets/faculty-image-with-jake.png";
+import logo from "@/assets/jake-logo.png";
+import robot from "@/assets/jake-robot.png";
+import robots from "@/assets/jake-robots.png";
 import { Parallax, ScrollAtmosphere } from "@/components/jake/ScrollMotion";
 import { RobotParticles } from "@/components/jake/RobotParticles";
 import { Label, Reveal } from "@/components/jake/ui";
